@@ -1,0 +1,27 @@
+{
+  "name": "editor-react",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.24.0",
+  "dependencies": {
+    "editor-core": "workspace:*",
+    "editor-parsers": "workspace:*",
+    "html-react-parser": "^5.2.15",
+    "lucide-react": "^0.563.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-syntax-highlighter": "^16.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "typescript": "^5.9.3"
+  }
+}

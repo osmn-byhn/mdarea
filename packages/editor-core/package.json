@@ -1,0 +1,16 @@
+{
+  "name": "editor-core",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Osman Beyhan",
+  "license": "ISC",
+  "packageManager": "pnpm@10.24.0",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

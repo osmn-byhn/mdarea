@@ -1,0 +1,59 @@
+/* Custom Theme for Markdown Editor */
+
+.custom-dark-theme.md-editor-container {
+    border-color: #4b5563;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.custom-toolbar {
+    background-color: #1f2937 !important;
+    border-bottom-color: #374151 !important;
+}
+
+.custom-toolbar button {
+    color: #d1d5db !important;
+}
+
+.custom-toolbar button:hover {
+    background-color: #374151 !important;
+    color: #f3f4f6 !important;
+}
+
+.custom-toolbar button.active {
+    background-color: #4b5563 !important;
+    color: #fff !important;
+}
+
+.custom-content-area {
+    background-color: #f9fafb;
+}
+
+.custom-editor-pane textarea {
+    background-color: #fffaf0 !important;
+    /* Slight yellow tint for "paper" feel */
+    color: #333 !important;
+}
+
+.custom-preview-pane {
+    background-color: #ffffff !important;
+    font-family: 'Georgia', serif;
+    /* Serif font for preview */
+}
+
+/* Mobile Tabs Customization */
+.custom-mobile-tabs {
+    background-color: #1f2937 !important;
+    border-bottom-color: #374151 !important;
+}
+
+.custom-tab-btn {
+    color: #9ca3af !important;
+}
+
+.custom-tab-btn.active {
+    background-color: #374151 !important;
+    color: #fbbf24 !important;
+    /* Amber color for active tab */
+    border-bottom-color: #fbbf24 !important;
+}
