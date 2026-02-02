@@ -1,4 +1,4 @@
-# MDArea 🚀
+# @osmn-byhn/mdarea 🚀
 
 A modern, responsive, and highly customizable Markdown editor for React applications. Designed for performance, flexibility, and a premium developer experience.
 
@@ -20,16 +20,16 @@ A modern, responsive, and highly customizable Markdown editor for React applicat
 ## 📦 Installation
 
 ```bash
-pnpm add editor-react editor-core editor-parsers
+pnpm add @osmn-byhn/mdarea
 # or
-npm install editor-react editor-core editor-parsers
+npm install @osmn-byhn/mdarea
 ```
 
 ## 🚀 Quick Start
 
 ```tsx
-import { MarkdownEditor } from 'editor-react';
-import 'editor-react/dist/styles.css'; // Don't forget the styles!
+import { MarkdownEditor } from '@osmn-byhn/mdarea';
+import '@osmn-byhn/mdarea/dist/styles.css'; // Don't forget the styles!
 
 function App() {
   return (
@@ -87,7 +87,7 @@ Apply direct styles to the preview content.
 You can use the internal components separately:
 
 ```tsx
-import { Preview, Editor, MarkdownEditorProvider } from 'editor-react';
+import { Preview, Editor, MarkdownEditorProvider } from '@osmn-byhn/mdarea';
 
 // Just a Previewer
 <Preview markdown="# Static Content" />

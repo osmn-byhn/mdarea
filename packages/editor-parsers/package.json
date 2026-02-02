@@ -1,5 +1,5 @@
 {
-  "name": "editor-parsers",
+  "name": "@osmn-byhn/editor-parsers",
   "version": "0.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

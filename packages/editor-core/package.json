@@ -1,5 +1,5 @@
 {
-  "name": "editor-core",
+  "name": "@osmn-byhn/editor-core",
   "version": "0.0.1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
