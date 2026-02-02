@@ -1,5 +1,8 @@
 {
   "name": "@osmn-byhn/editor-parsers",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
