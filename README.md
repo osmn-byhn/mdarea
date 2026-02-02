@@ -29,7 +29,7 @@ npm install @osmn-byhn/mdarea
 
 ```tsx
 import { MarkdownEditor } from '@osmn-byhn/mdarea';
-import '@osmn-byhn/mdarea/dist/styles.css'; // Don't forget the styles!
+import '@osmn-byhn/mdarea/styles.css'; // Don't forget the styles!
 
 function App() {
   return (
@@ -88,6 +88,18 @@ You can use the internal components separately:
 
 ```tsx
 import { Preview, Editor, MarkdownEditorProvider } from '@osmn-byhn/mdarea';
+
+### ☕ JavaScript Version (No TypeScript)
+If you are using plain JavaScript (React), it works exactly the same:
+
+```jsx
+import { MarkdownEditor } from '@osmn-byhn/mdarea';
+import '@osmn-byhn/mdarea/styles.css';
+
+function App() {
+  return <MarkdownEditor onChange={(val) => console.log(val)} />;
+}
+```
 
 // Just a Previewer
 <Preview markdown="# Static Content" />
