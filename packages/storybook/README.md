@@ -64,3 +64,6 @@ To apply global styles or override editor variables in the storybook environment
   --md-primary-color: #0070f3;
 }
 ```
+
+Want you run or test the project live on the web? 
+Storybook is deployed on Vercel. You can access it at `https://mdarea-storybook.osmanbeyhan.com`.
