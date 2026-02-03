@@ -1,0 +1,5 @@
+{
+    "buildCommand": "pnpm --filter @osmn-byhn/storybook-docs run build-storybook",
+    "outputDirectory": "packages/storybook/storybook-static",
+    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
+}
