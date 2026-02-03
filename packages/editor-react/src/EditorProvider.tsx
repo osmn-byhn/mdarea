@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useRef, useState } from "react";
-import { createEditor } from "editor-core";
+import { createEditor } from "@osmn-byhn/editor-core";
 
 const EditorContext = createContext<any>(null);
 

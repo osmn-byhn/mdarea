@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import parse, { DOMNode, Element } from 'html-react-parser';
 import { useEditor } from "./EditorProvider";
-import { markdownToHtml } from "editor-parsers";
+import { markdownToHtml } from "@osmn-byhn/editor-parsers";
 import { CodeBlock } from "./CodeBlock";
 import "./styles.css";
 

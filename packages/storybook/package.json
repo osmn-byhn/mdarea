@@ -15,7 +15,7 @@
   "devDependencies": {
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "storybook": "^1.0.0",
+    "storybook": "^10.2.3",
     "@storybook/react-vite": "^10.2.3",
     "@chromatic-com/storybook": "^5.0.0",
     "@storybook/addon-vitest": "^10.2.3",
@@ -26,6 +26,9 @@
     "playwright": "^1.58.1",
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
-    "@osmn-byhn/mdarea": "workspace:*"
+    "@osmn-byhn/mdarea": "workspace:*",
+    "@storybook/react": "^10.2.4",
+    "@storybook/addon-actions": "^9.0.8",
+    "@storybook/addon-links": "^10.2.4"
   }
 }

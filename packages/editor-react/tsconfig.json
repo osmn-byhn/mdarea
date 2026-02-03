@@ -12,10 +12,10 @@
         "skipLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "editor-core": [
+            "@osmn-byhn/editor-core": [
                 "../editor-core/index.ts"
             ],
-            "editor-parsers": [
+            "@osmn-byhn/editor-parsers": [
                 "../editor-parsers/src/index.ts"
             ]
         }

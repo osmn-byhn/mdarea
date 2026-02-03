@@ -1,9 +1,20 @@
-const path = require("path");
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
-module.exports = {
+const config = {
   framework: "@storybook/react-vite",
   stories: ["../stories/**/*.stories.@(ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-a11y",
+    "@storybook/addon-interactions",
+    "@chromatic-com/storybook",
+  ],
 
   viteFinal: async (config) => {
     config.resolve = config.resolve || {};
@@ -47,3 +58,6 @@ module.exports = {
     return config;
   },
 };
+
+export default config;
+
