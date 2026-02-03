@@ -1,5 +1,14 @@
 # @osmn-byhn/mdarea
 
+## 0.0.5
+
+### Patch Changes
+
+- Documentation updates
+- Updated dependencies
+  - @osmn-byhn/editor-core@0.0.4
+  - @osmn-byhn/editor-parsers@0.0.4
+
 ## 0.0.4
 
 ### Patch Changes

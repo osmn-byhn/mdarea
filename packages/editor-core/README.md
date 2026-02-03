@@ -1,6 +1,12 @@
 # @osmn-byhn/editor-core
 
-Core logic and state management for the markdown editor. This package is framework-agnostic and handles text manipulation, selection state, and formatting operations.
+The core logic and state management library for the `@osmn-byhn` markdown editor ecosystem. This package is framework-agnostic, meaning it can be used with React, Vue, Svelte, or vanilla JavaScript.
+
+It handles:
+- Text manipulation
+- Selection (cursor) management
+- Markdown formatting logic (bold, italic, lists, etc.)
+- History/Undo management (planned)
 
 ## Installation
 
@@ -8,50 +14,83 @@ Core logic and state management for the markdown editor. This package is framewo
 pnpm add @osmn-byhn/editor-core
 ```
 
-## Usage
+## Quick Start
 
 ```typescript
 import { createEditor } from '@osmn-byhn/editor-core'
 
-// Initialize editor
-const editor = createEditor('Initial content')
+// 1. Initialize the editor
+const editor = createEditor('Hello **World**')
 
-// Get current state
-const state = editor.getState()
-console.log(state.value) // 'Initial content'
+// 2. Subscribe to changes (if needed manually) or get state
+console.log(editor.getState())
+// Output: { value: 'Hello **World**', selection: { start: 0, end: 0 }, format: 'markdown' }
 
-// Update value
-editor.setValue('New content')
-
-// Formatting
-editor.toggleWrap('**') // Toggle bold
-editor.toggleLinePrefix('# ') // Toggle H1
+// 3. Perform actions
+editor.setSelection(6, 11) // Select "World"
+editor.toggleWrap('_')     // Italicize -> "Hello **_World_**"
 ```
 
-## API
+## API Reference
 
 ### `createEditor(initialValue?: string)`
 
-Creates a new editor instance.
+Initializes a new editor instance.
 
-Returns an object with the following methods:
+- **Parameters**: 
+  - `initialValue` (optional): The starting markdown content. Default is `''`.
+- **Returns**: An object containing the editor methods.
 
-- **`getState()`**: Returns the current `EditorState` ({ value, selection, format }).
-- **`setValue(value: string)`**: Updates the editor content.
-- **`setSelection(start: number, end: number)`**: Updates the cursor selection.
-- **`isActive(type: FormattingType)`**: Checks if the current selection has the specified formatting.
-  - Types: `'bold' | 'italic' | 'strikethrough' | 'code' | 'h1' | 'h2' | 'h3' | 'ordered' | 'unordered' | 'task'`
-- **`toggleWrap(syntax: string)`**: Toggles wrapping syntax around selection (e.g., `**` for bold).
-- **`toggleLinePrefix(prefix: string)`**: Toggles line prefixes (e.g., `# ` for headers).
-- **`insertText(text: string)`**: Inserts text at the current cursor position.
-- **`applyBlock(type: 'code', lang?: string)`**: Applies block formatting (currently supports code blocks).
+---
 
-### Types
+### Key Methods
+
+#### `getState(): EditorState`
+Returns the current snapshot of the editor state.
+```typescript
+interface EditorState {
+  value: string          // Current content
+  selection: {           // Current cursor/selection position
+    start: number
+    end: number
+  }
+  format: EditorFormat   // 'markdown' | 'html'
+}
+```
+
+#### `setValue(value: string): void`
+Replaces the entire content of the editor. This is useful for controlled components or external updates.
+
+#### `setSelection(start: number, end: number): void`
+Updates the cursor position or selection range.
+- `start`: Start index of the selection.
+- `end`: End index of the selection.
+
+#### `insertText(text: string): void`
+Inserts text at the current cursor position or replaces the current selection with the given text.
+
+#### `isActive(type: FormattingType): boolean`
+Checks if the current selection is formatted with the specific type.
+- **Types**: `'bold' | 'italic' | 'strikethrough' | 'code' | 'h1' | 'h2' | 'h3' | 'ordered' | 'unordered' | 'task'`
+
+#### `toggleWrap(syntax: string): void`
+Toggles wrapping syntax around the current selection. Used for inline styles.
+- **Example**: `editor.toggleWrap('**')` for bold.
+
+#### `toggleLinePrefix(prefix: string): void`
+Toggles a prefix at the start of the current line. Used for block styles.
+- **Example**: `editor.toggleLinePrefix('# ')` for H1.
+
+#### `applyBlock(type: 'code', lang?: string): void`
+Wraps the selection in a code block with an optional language.
+- **Example**: `editor.applyBlock('code', 'typescript')`
+
+## Types
 
 ```typescript
-type EditorFormat = 'markdown' | 'html'
+export type EditorFormat = 'markdown' | 'html'
 
-interface EditorState {
+export interface EditorState {
   value: string
   selection: {
     start: number

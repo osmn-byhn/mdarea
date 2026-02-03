@@ -1,5 +1,11 @@
 # @osmn-byhn/editor-core
 
+## 0.0.4
+
+### Patch Changes
+
+- Documentation updates
+
 ## 0.0.3
 
 ### Patch Changes
