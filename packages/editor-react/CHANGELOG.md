@@ -1,5 +1,11 @@
 # @osmn-byhn/mdarea
 
+## 0.0.4
+
+### Patch Changes
+
+- 0c28c5d: Fix preview text visibility by adding a default text color to the preview area.
+
 ## 0.0.3
 
 ### Patch Changes
