@@ -1,5 +1,11 @@
 # @osmn-byhn/editor-parsers
 
+## 0.0.3
+
+### Patch Changes
+
+- Fix process.cwd crash in browser and update internal package imports to use scoped names.
+
 ## 0.0.2
 
 ### Patch Changes
